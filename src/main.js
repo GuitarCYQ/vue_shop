@@ -9,6 +9,12 @@ import './assets/css/global.css'
 import axios from 'axios'
 // 配置请求路径
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1/'
+// 拦截器 添加token
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  // 在最后必须return config
+  return config
+})
 // prototype原型对象
 Vue.prototype.$http = axios
 
