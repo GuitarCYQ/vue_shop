@@ -7,6 +7,10 @@ import './assets/css/global.css'
 
 // 导入请求http包 axios
 import axios from 'axios'
+
+// 导入TreeTable
+import TreeTable from 'vue-table-with-tree-grid'
+
 // 配置请求路径
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1/'
 // 拦截器 添加token
@@ -19,6 +23,9 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+
+// 注册为全局可用
+Vue.component('tree-table', TreeTable)
 
 new Vue({
   router,
