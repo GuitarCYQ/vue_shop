@@ -136,8 +136,9 @@ export default {
     // 跳转到修改商品
     goEditgoods (id) {
       // 跳转到goods/add页面
-      this.$router.push('/goods/edit', {
-        params: {
+      this.$router.push({
+        path: '/goods/edit',
+        query: {
           id
         }
       })
