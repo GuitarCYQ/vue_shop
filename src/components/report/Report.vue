@@ -69,7 +69,7 @@ export default {
     }
 
     // 4.准备数据和配置项
-    // _.merge(数据1，数据2) 合并数据
+    // loadsh _.merge(数据1，数据2) 合并数据
     const result = _.merge(res.data, this.options)
 
     // 5. 展示数据
